@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root{
+    --primary-color: #000000;
+    --acent-color: #1B8F7A;
+    --text-light: #565959;
+    --bg-dark: #F5F5F5;
+    --bg-white: #ffffff;
+    --text-white: #ffffff;
+    --text-dark: #000000;
+    --btn-hover: #17161a;
+  }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Poppins";
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--acent-color);
+  }
+
+  /* Container */
+  .container{
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* Topbar */
+  .top-bar{
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 8px 0;
+  }
+
+  .top-bar > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .top-right span.top-bar-icon, .top-left span.top-bar-icon, 
+  .hero-banner span.icon-list {
+    float: left;
+    width: 24px;
+  }
+
+  .top-right span.top-bar-text, .top-left span.top-bar-text, 
+  .hero-banner .icon-list-content {
+    display: flex;
+    margin-left: 32px;
+  }
+
+  /* Navigation */
+  span.hamburger {
+    display: none;
+}
+
+.navbar > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.navbar nav ul.main-menu{
+    display: flex;
+}
+
+.navbar nav ul li{
+    list-style: none;
+}
+
+.navbar nav ul li a{
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 18px;
+    padding: 0 13px;
+    transition: 0.2s
+    /* font-family: 'Jost', sans-serif; */
+}
+
+.navbar nav ul li a:hover {
+    color: var(--acent-color);
+}
+
+.navbar nav ul li a:active{
+    color: var(--acent-color);
+    font-weight: 500;
+}
+.navbar nav ul.sub-menu {
+    display: none;
+}
+
+/* header cta */
+span.contact-cta {
+    background-color: var(--acent-color);
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+span.contact-cta:hover{
+    background-color: var(--btn-hover);
+}
+
+span.contact-cta a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Hero Section */
+section.home-hero {
+    padding: 40px 0 60px 0;
+}
+
+.hero-banner{
+    display: flex;
+    align-items: center;
+}
+
+/* .banner-content h1{
+    animation: fromButtom 3s infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fromButtom{
+    from{
+        left: 0px;
+    }
+    to{
+        left: 300px;
+    }
+} */
+
+.hero-banner h1{
+    font-size: 2.8rem;
+    line-height: 1.4;
+    padding-bottom: 25px;
+}
+
+.hero-banner p{
+    padding: 6px 0;
+}
+
+.hero-banner span.icon-list{
+    margin-top: 3px;
+}
+
+.brands {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.brands-img img {
+    width: 125px;
+}
+
+.we-buy {
+    margin-top: 95px;
+    padding: 30px 20px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+/* cta */
+.banner.cta{
+    padding-top: 50px;
+}
+
+button.primary-cta{
+    background-color: var(--acent-color);
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: none;
+    transition: 0.3s;
+}
+
+button.primary-cta:hover{
+    background-color: var(--btn-hover);
+}
+
+button.primary-cta a{
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+button.secondary-cta{
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    outline: 2px solid var(--acent-color);
+    outline-offset: -2px;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+button.secondary-cta:hover{
+    outline: 2px solid var(--btn-hover);
+}
+
+button.secondary-cta a{
+    color: var(--acent-color);
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+button.secondary-cta a:hover{
+    color: var(--text-dark);
+}
+
+.ask-for-price{
+    padding-top: 20px;
+}
+
+/* About */
+section.about{
+    padding: 80px 0;
+    background-color: var(--bg-dark);
+}
+
+.about-banner, 
+.removal-banner, 
+.auto-wreckers, 
+.cash-instant, 
+.rate-cash, 
+.faq {
+    display: flex;
+}
+
+.about-banner .first-half,
+.about-banner .second-half, 
+.removal-banner .first-half,
+.removal-banner .second-half, 
+.auto-wreckers .first-half,
+.auto-wreckers .second-half,
+.cash-instant .first-half,
+.cash-instant .second-half, 
+.rate-cash .first-half,
+.rate-cash .second-half{
+    flex: 1;
+}
+
+.about-banner .second-half, 
+.auto-wreckers .second-half{
+    text-align: right;
+    text-align: -webkit-right;
+}
+
+.about-banner h2, 
+.removal-banner .second-half h2, 
+.auto-wreckers .first-half h2, 
+.cash-instant .second-half h2, 
+.rate-cash .first-half h2, 
+.faq .first-half h2{
+    font-size: 2.8rem;
+    line-height: 1.4;
+    padding-bottom: 25px;
+}
+
+p.mb-2 {
+    padding-bottom: 25px;
+}
+
+/* Removal Service */
+section.service-removal , 
+section.auto-wreckers, 
+section.cash-rate{
+    padding: 60px 0px;
+}
+
+section.sydney-removal, 
+section.instant-cash{
+    background-color: var(--bg-dark);
+    padding: 80px 0 60px 0;
+}
+
+/* FAQS */
+
+section.faqs{
+    background-color: var(--bg-dark);
+    padding: 80px 0 80px 0;
+}
+.faq .first-half{
+    flex: 1;
+}
+
+.faq .second-half{
+    flex: 1;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
