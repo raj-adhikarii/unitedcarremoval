@@ -25,7 +25,7 @@
   }
 
   body {
-    line-height: 1.5;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     font-family: "Poppins";
   }
@@ -60,6 +60,7 @@
   .container{
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 40px;
   }
 
   /* Topbar */
@@ -76,13 +77,12 @@
   }
 
   .top-right span.top-bar-icon, .top-left span.top-bar-icon, 
-  .hero-banner span.icon-list {
+  .hero-banner span.icon-list{
     float: left;
     width: 24px;
   }
 
-  .top-right span.top-bar-text, .top-left span.top-bar-text, 
-  .hero-banner .icon-list-content {
+  .top-right span.top-bar-text, .top-left span.top-bar-textt {
     display: flex;
     margin-left: 32px;
   }
@@ -96,7 +96,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 0;
+    padding: 25px 40px;
 }
 
 .navbar nav ul.main-menu{
@@ -196,6 +196,13 @@ section.home-hero {
     width: 125px;
 }
 
+.brands-img:hover {
+    transform: translateY(-6px);
+    transition-duration: 0.5s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
 .we-buy {
     margin-top: 95px;
     padding: 30px 20px;
@@ -214,6 +221,7 @@ button.primary-cta{
     padding: 10px 25px;
     border: none;
     transition: 0.3s;
+    margin-right: 12px;
 }
 
 button.primary-cta:hover{
@@ -235,12 +243,15 @@ button.secondary-cta{
     padding: 10px 25px;
     outline: 2px solid var(--acent-color);
     outline-offset: -2px;
-    margin-left: 12px;
     transition: 0.3s;
 }
 
 button.secondary-cta:hover{
     outline: 2px solid var(--btn-hover);
+}
+
+button.secondary-cta:hover>a{
+    color: var(--btn-hover);
 }
 
 button.secondary-cta a{
@@ -299,7 +310,9 @@ section.about{
 .auto-wreckers .first-half h2, 
 .cash-instant .second-half h2, 
 .rate-cash .first-half h2, 
-.faq .first-half h2{
+.faq .first-half h2, 
+section.home-services h2, 
+section.testimonial h2{
     font-size: 2.8rem;
     line-height: 1.4;
     padding-bottom: 25px;
@@ -335,6 +348,7 @@ section.faqs{
 .faq .second-half{
     flex: 1;
 }
+
 .accordion {
     background-color: #eee;
     color: #444;
@@ -358,3 +372,351 @@ section.faqs{
     background-color: white;
     overflow: hidden;
   }
+
+  /* Services */
+  section.home-services{
+    padding: 70px 0;
+  }
+
+  .service-wraper, 
+  .testimonial-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.service-card, 
+.testimonial-card {
+    flex-basis: 31%;
+}
+
+section.home-services h2, 
+section.testimonial h2{
+    text-align: center;
+}
+
+.service-card, 
+.testimonial-card {
+    border-width: 8px 1px 1px 1px;
+    border-style: solid;
+    border-color: #1b8f7a;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+}
+
+.icon-box img,
+.card-header img {
+    margin: 0 auto;
+}
+
+.card-header {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 25px 0 17px;
+}
+.card-body{
+    line-height: 1.7;
+}
+
+section.testimonial {
+    padding: 70px 0;
+    background: var(--bg-dark);
+}
+
+.testimonial-card .card-body{
+    padding: 25px 0 17px;
+}
+
+/* Map with form */
+section.map-with-form .map-with-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form{
+    flex-basis: 33%;
+}
+
+.map{
+    flex-basis: 66%;
+}
+
+/* Pre footer */
+section.pre-footer{
+    background-color: var(--acent-color);
+    padding: 70px 0;
+}
+
+.pre-footer-message p{
+    color: #fff;
+}
+
+button.white-cta{
+    background-color: var(--bg-white);
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: none;
+    transition: 0.3s;
+}
+
+button.white-cta:hover{
+    background-color: var(--btn-hover);
+}
+
+button.white-cta:hover>a{
+    color: var(--text-white);
+}
+
+button.white-cta a {
+    color: var(--acent-color);
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.pre-footer-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.pre-footer-message {
+    flex-basis: 62%;
+}
+
+/* About Page */
+.about-banner .about {
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Footer  */
+footer{
+    background-color: var(--btn-hover);
+    color: var(--text-white);
+    padding: 70px 0;
+}
+
+.footer-col-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+h4.widget-title {
+    padding-bottom: 20px;
+}
+
+ul.footer-list{
+    padding: 0;
+    line-height: 2;
+}
+
+ul.footer-list li, 
+.copyright-wraper .social ul li{
+    list-style: none;
+}
+
+ul.footer-list li a{
+    color: var(--text-white);
+}
+
+.copyright{
+    background-color: #101010;
+    color: var(--text-white);
+    padding: 15px 0;
+}
+
+.copyright-wraper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-wraper .social ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+/* Media Query */
+@media(min-width: 640px){
+    .pre-footer-wraper{
+        gap: 30px;
+    }
+}
+@media(max-width: 1431px){
+    .navbar {
+        display: none;
+    }
+
+    .hero-banner h1, 
+    .about-banner h2, .removal-banner .second-half h2, .auto-wreckers .first-half h2, .cash-instant .second-half h2, .rate-cash .first-half h2, .faq .first-half h2, section.home-services h2, section.testimonial h2{
+        font-size: 2rem;
+    }
+
+    .service-wraper, .testimonial-wraper {
+        gap: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1024px){
+    .footer-col-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .footer-col:nth-child(1), .footer-col:nth-child(2) {
+        padding-bottom: 50px;
+    }
+
+    .footer-col{
+        flex-basis: 50%;
+    }
+/* 
+    .we-buy {
+        position: absolute;
+        top: 88%;
+    } */
+}
+@media(max-width: 967px){
+    .service-card, .testimonial-card {
+        flex-basis: 48%;
+    }
+
+    /* section.map-with-form .map-with-form-wrapper{
+        flex-direction: column;
+    } */
+
+   .form, .map{
+    flex-basis: 50%;
+   }
+}
+
+@media(max-width: 911px){
+    .service-card, .testimonial-card {
+        flex-basis: 45%;
+    }
+
+    button.primary-cta{
+        margin-bottom: 10px;
+    }
+}
+
+
+@media(max-width: 810px){
+    .hero-banner h1, 
+    .about-banner h2, .removal-banner .second-half h2, .auto-wreckers .first-half h2, .cash-instant .second-half h2, .rate-cash .first-half h2, .faq .first-half h2, section.home-services h2, section.testimonial h2{
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 768px){
+    .hero-banner, 
+    .about-banner, 
+    .auto-wreckers, 
+    .rate-cash{
+        flex-direction: column-reverse;
+    }
+
+    .about-banner .second-half, .auto-wreckers .second-half {
+        text-align: center;
+        text-align: -webkit-center;
+    }
+
+    .about-banner .first-half,
+    .cash-instant .second-half {
+        padding-top: 50px;
+    }
+
+    .removal-banner, 
+    .cash-instant, 
+    .faq, 
+    section.map-with-form .map-with-form-wrapper{
+        flex-direction: column;
+    }
+
+    .form{
+        margin: 0 auto;
+    }
+
+    .map iframe {
+        height: 400px;
+    }
+}
+
+@media(max-width: 675px){
+    .service-card, .testimonial-card {
+        flex-basis: 100%;
+    }
+
+    .pre-footer-wraper{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pre-footer-message{
+        text-align: center;
+    }
+
+    .copyright-wraper{
+        align-items: center;
+    }
+
+    ul.footer-list li a{
+        font-size: 14px;
+    }
+
+    .copyright-text p {
+        font-size: 13px;
+    }
+}
+
+@media(max-width:588px){
+    .footer-col-wrapper{
+        flex-direction: column;
+    }
+
+    .footer-col {
+        flex-basis: 100%;
+    }
+
+    .footer-col:nth-child(3){
+        padding-bottom: 50px;
+    }
+
+    .copyright-wraper {
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}
+
+@media(max-width:420px){
+    .top-bar p {
+        font-size: 13px;
+    }
+
+    .top-bar > .container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .copyright-wraper {
+       flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .copyright-wraper .social ul{
+        padding: 0;
+    }
+}
+
