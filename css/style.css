@@ -77,7 +77,8 @@
   }
 
   .top-right span.top-bar-icon, .top-left span.top-bar-icon, 
-  .hero-banner span.icon-list{
+  .hero-banner span.icon-list, 
+  .hero-about span.icon-list{
     float: left;
     width: 24px;
   }
@@ -158,31 +159,20 @@ section.home-hero {
     align-items: center;
 }
 
-/* .banner-content h1{
-    animation: fromButtom 3s infinite;
-    animation-timing-function: ease-in;
-}
-
-@keyframes fromButtom{
-    from{
-        left: 0px;
-    }
-    to{
-        left: 300px;
-    }
-} */
-
-.hero-banner h1{
+.hero-banner h1, 
+.banner-content h1{
     font-size: 2.8rem;
     line-height: 1.4;
     padding-bottom: 25px;
 }
 
-.hero-banner p{
+.hero-banner p, 
+.hero-about p{
     padding: 6px 0;
 }
 
-.hero-banner span.icon-list{
+.hero-banner span.icon-list, 
+.hero-about span.icon-list{
     margin-top: 3px;
 }
 
@@ -212,7 +202,7 @@ section.home-hero {
 
 /* cta */
 .banner.cta{
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 button.primary-cta{
@@ -278,6 +268,7 @@ section.about{
 }
 
 .about-banner, 
+.hero-about,
 .removal-banner, 
 .auto-wreckers, 
 .cash-instant, 
@@ -295,12 +286,14 @@ section.about{
 .cash-instant .first-half,
 .cash-instant .second-half, 
 .rate-cash .first-half,
-.rate-cash .second-half{
+.rate-cash .second-half, 
+.hero-about {
     flex: 1;
 }
 
 .about-banner .second-half, 
-.auto-wreckers .second-half{
+.auto-wreckers .second-half, 
+.hero-about .banner-image{
     text-align: right;
     text-align: -webkit-right;
 }
@@ -312,7 +305,8 @@ section.about{
 .rate-cash .first-half h2, 
 .faq .first-half h2, 
 section.home-services h2, 
-section.testimonial h2{
+section.testimonial h2, 
+.centered h1{
     font-size: 2.8rem;
     line-height: 1.4;
     padding-bottom: 25px;
@@ -490,11 +484,189 @@ button.white-cta a {
 }
 
 /* About Page */
+.hero-about{
+    padding: 70px 0 80px 0;
+}
+
+.banner-content, 
+.hero-about .banner-image{
+    flex-basis: 50%;
+}
+
 .about-banner .about {
     max-width: 768px;
     margin: 0 auto;
     text-align: center;
 }
+
+.iconlist span.icon-list {
+    float: left;
+    width: 20px;
+}
+
+.iconlist span.icon-list-content {
+    margin-left: 32px;
+    display: flex;
+}
+
+.iconlist .icon-list {
+    margin-top: 3px;
+}
+
+.iconlist p {
+    padding: 6px 0;
+}
+
+.iconlist {
+    padding-bottom: 25px;
+}
+
+/* Sell car for cash */
+.car-removal h3 {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+/* Car Wreckers Page */
+
+.d-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.d-flex p {
+    background: #E4EDEB;
+    padding: 20px;
+    flex-basis: 40%;
+    border-radius: 5px;
+}
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flex-grid p {
+    flex-basis: 32%;
+}
+
+/* blog */
+.blog-hero{
+    position: relative;
+}
+
+section.blog-hero img {
+    width: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-white);
+    text-align: center;
+}
+
+h2.blog-title {
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 60px 0 40px 0;
+}
+
+.mt-2{
+    margin-top: 20px;
+}
+
+.card-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    padding-bottom: 80px;
+}
+
+.card-wraper > .card {
+    flex-basis: 31.1%;
+    background-color: var(--bg-dark);
+}
+
+.cd {
+    padding: 0 25px;
+}
+
+.image-box{
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+}
+
+.date {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    right: 1px;
+    color: var(--text-white);
+    background-color: var(--acent-color);
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px 4px 0 0;
+}
+
+button.learn-more{
+    color: var(--text-white);
+    background-color: var(--acent-color);
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 4px 4px 0 0;
+    border: none;
+}
+
+button.learn-more:hover{
+    background-color: var(--btn-hover);
+}
+
+.cd .card-body {
+    padding-bottom: 40px;
+}
+
+.card-footer{
+    text-align: center;
+}
+
+.learn-more a{
+    color: var(--text-white);
+}
+
+/* Pagination */
+.center {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+  }
+  
+  .pagination a.active {
+    background-color: var(--acent-color);
+    color: white;
+    border: 1px solid var(--acent-color);
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
 
 /* Footer  */
 footer{
@@ -543,7 +715,6 @@ ul.footer-list li a{
     gap: 15px;
 }
 
-
 /* Media Query */
 @media(min-width: 640px){
     .pre-footer-wraper{
@@ -555,8 +726,9 @@ ul.footer-list li a{
         display: none;
     }
 
-    .hero-banner h1, 
-    .about-banner h2, .removal-banner .second-half h2, .auto-wreckers .first-half h2, .cash-instant .second-half h2, .rate-cash .first-half h2, .faq .first-half h2, section.home-services h2, section.testimonial h2{
+    .hero-banner h1, .banner-content h1,
+    .about-banner h2, .removal-banner .second-half h2, .auto-wreckers .first-half h2, .cash-instant .second-half h2, .rate-cash .first-half h2, .faq .first-half h2, section.home-services h2, section.testimonial h2, 
+    .centered h1{
         font-size: 2rem;
     }
 
@@ -579,20 +751,18 @@ ul.footer-list li a{
     .footer-col{
         flex-basis: 50%;
     }
-/* 
-    .we-buy {
-        position: absolute;
-        top: 88%;
-    } */
+
+    section.blog-hero img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+
 }
 @media(max-width: 967px){
     .service-card, .testimonial-card {
         flex-basis: 48%;
     }
-
-    /* section.map-with-form .map-with-form-wrapper{
-        flex-direction: column;
-    } */
 
    .form, .map{
     flex-basis: 50%;
@@ -611,13 +781,12 @@ ul.footer-list li a{
 
 
 @media(max-width: 810px){
-    .hero-banner h1, 
-    .about-banner h2, .removal-banner .second-half h2, .auto-wreckers .first-half h2, .cash-instant .second-half h2, .rate-cash .first-half h2, .faq .first-half h2, section.home-services h2, section.testimonial h2{
+    .hero-banner h1, .banner-content h1,
+    .about-banner h2, .removal-banner .second-half h2, .auto-wreckers .first-half h2, .cash-instant .second-half h2, .rate-cash .first-half h2, .faq .first-half h2, section.home-services h2, section.testimonial h2, 
+    .centered h1{
         font-size: 1.6rem;
     }
-}
 
-@media(max-width: 768px){
     .hero-banner, 
     .about-banner, 
     .auto-wreckers, 
@@ -625,16 +794,18 @@ ul.footer-list li a{
         flex-direction: column-reverse;
     }
 
-    .about-banner .second-half, .auto-wreckers .second-half {
+    .about-banner .second-half, .auto-wreckers .second-half, 
+    .hero-about .banner-image {
         text-align: center;
         text-align: -webkit-center;
     }
 
     .about-banner .first-half,
-    .cash-instant .second-half {
+    .cash-instant .second-half , .hero-about .banner-image{
         padding-top: 50px;
     }
 
+    .hero-about,
     .removal-banner, 
     .cash-instant, 
     .faq, 
@@ -651,9 +822,25 @@ ul.footer-list li a{
     }
 }
 
+@media(max-width: 768px){
+   .centered {
+    left: 25%;
+    transform: translate(-17%, -50%); 
+   }
+}
+
 @media(max-width: 675px){
     .service-card, .testimonial-card {
         flex-basis: 100%;
+    }
+
+    .d-flex{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flex-grid p {
+        flex-basis: 49%;
     }
 
     .pre-footer-wraper{
@@ -679,6 +866,22 @@ ul.footer-list li a{
 }
 
 @media(max-width:588px){
+    .container {
+        padding: 0 20px;
+    }
+
+    .we-buy {
+        margin-top: 35px; 
+    }
+
+    .card-header h3 {
+        font-size: 22px;
+    }
+
+    .flex-grid p {
+        flex-basis: 90%;
+    }
+
     .footer-col-wrapper{
         flex-direction: column;
     }
@@ -696,6 +899,7 @@ ul.footer-list li a{
         flex-direction: column-reverse;
         gap: 20px;
     }
+
 }
 
 @media(max-width:420px){
@@ -707,6 +911,15 @@ ul.footer-list li a{
         align-items: flex-start;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .pre-footer-wraper{
+        flex-wrap: nowrap;
+    }
+
+    .centered {
+        left: 20%;
+        transform: translate(-12%, -50%);
     }
 
     .copyright-wraper {
