@@ -1,4 +1,21 @@
 // nav
+$(function(){
+  $btnToggle = $('.btn--toggle');
+  $submenuTrigger = $('.submenu--trigger');
+  
+  $btnToggle.on('click', function(e) {
+    // e.preventDefault();
+    let $target = $( $(e.currentTarget).attr('data-target') );
+    $target.toggleClass('showing');
+  });
+  
+  $submenuTrigger.on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+  });
+  
+});
+
 var myNav = document.getElementById('mynav');
 window.onscroll = function () { 
    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200  ) {

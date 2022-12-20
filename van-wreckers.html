@@ -101,6 +101,7 @@
               </header>
         </div>
     </div>
+    
     <main>
         <section class="about-hero">
             <div class="container">
@@ -372,21 +373,5 @@
                 </div>
             </div>
         </section>
-        <script>$(function(){
-            $btnToggle = $('.btn--toggle');
-            $submenuTrigger = $('.submenu--trigger');
-            
-            $btnToggle.on('click', function(e) {
-              // e.preventDefault();
-              let $target = $( $(e.currentTarget).attr('data-target') );
-              $target.toggleClass('showing');
-            });
-            
-            $submenuTrigger.on('click', function(e) {
-              e.preventDefault();
-              $(this).toggleClass('active');
-            });
-            
-          });</script>
 </body>
 </html>

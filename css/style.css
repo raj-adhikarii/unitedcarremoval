@@ -246,11 +246,14 @@ li {
   
   
   .nav-utilities ul li a {
-      background-color: var(--acent-color);
-      border-radius: 30px;
-      padding: 10px 25px;
-      transition: 0.3s;
-      color: #ffffff;
+    background-color: var(--acent-color);
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: 0.3s;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
   }
   
   .nav-utilities ul li a:hover{
