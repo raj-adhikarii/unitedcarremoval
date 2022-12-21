@@ -91,11 +91,6 @@
   span.top-bar-text {
     margin-left: 10px;
 }
-
-
-li {
-    white-space: nowrap;
-  }
   
   ul, li {
     margin: 0;
@@ -169,6 +164,7 @@ li {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 999;
  }
 
  .nav-colored .nav-brand {
@@ -232,7 +228,8 @@ li {
     border-radius: 0px 0px 5px 5px;
     transition: 0.2s ease-out;
     top: 50px;
-    min-width: 200px;
+    min-width: 245px;
+    z-index: 1;
   }
 
   .submenu li:hover {
@@ -473,10 +470,10 @@ section.faq-rev {
     transition: 0.4s;
   }
   
-  .active, .accordion:hover {
-    background-color: #ccc; 
-  }
-  
+  /* .nav-link:active{
+    color: #1b8f7a !important;
+    font-weight: 600;
+} */
   .panel {
     padding: 0 18px;
     display: none;
