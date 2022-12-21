@@ -2,6 +2,7 @@
 $(function(){
   $btnToggle = $('.btn--toggle');
   $submenuTrigger = $('.submenu--trigger');
+  $thirdSubmenuTrigger = $('.third-submenu--trigger');
   
   $btnToggle.on('click', function(e) {
     // e.preventDefault();
@@ -9,10 +10,11 @@ $(function(){
     $target.toggleClass('showing');
   });
   
-  $submenuTrigger.on('click', function(e) {
-    e.preventDefault();
-    $(this).toggleClass('active');
-  });
+  
+  // $submenuTrigger.on('click', function(e) {
+  //   e.preventDefault();
+  //   $(this).toggleClass('active');
+  // });
   
 });
 
@@ -43,4 +45,5 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
 
