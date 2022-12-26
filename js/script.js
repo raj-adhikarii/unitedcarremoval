@@ -1,23 +1,4 @@
-// nav
-// $(function(){
-//   $btnToggle = $('.btn--toggle');
-//   $submenuTrigger = $('.submenu--trigger');
-//   $thirdSubmenuTrigger = $('.third-submenu--trigger');
-  
-//   $btnToggle.on('click', function(e) {
-//     // e.preventDefault();
-//     let $target = $( $(e.currentTarget).attr('data-target') );
-//     $target.toggleClass('showing');
-//   });
-  
-  
-//   // $submenuTrigger.on('click', function(e) {
-//   //   e.preventDefault();
-//   //   $(this).toggleClass('active');
-//   // });
-  
-// });
-
+// Sticky nav
 var myNav = document.getElementById('mynav');
 window.onscroll = function () { 
    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200  ) {
@@ -30,22 +11,7 @@ window.onscroll = function () {
     }
 };
 
-// According
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-
+// Animination
 const observer = new IntersectionObserver((entries) =>{
   entries.forEach((entry)=> {
     if(entry.isIntersecting){
