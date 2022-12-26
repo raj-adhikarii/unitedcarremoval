@@ -1,22 +1,22 @@
 // nav
-$(function(){
-  $btnToggle = $('.btn--toggle');
-  $submenuTrigger = $('.submenu--trigger');
-  $thirdSubmenuTrigger = $('.third-submenu--trigger');
+// $(function(){
+//   $btnToggle = $('.btn--toggle');
+//   $submenuTrigger = $('.submenu--trigger');
+//   $thirdSubmenuTrigger = $('.third-submenu--trigger');
   
-  $btnToggle.on('click', function(e) {
-    // e.preventDefault();
-    let $target = $( $(e.currentTarget).attr('data-target') );
-    $target.toggleClass('showing');
-  });
+//   $btnToggle.on('click', function(e) {
+//     // e.preventDefault();
+//     let $target = $( $(e.currentTarget).attr('data-target') );
+//     $target.toggleClass('showing');
+//   });
   
   
-  // $submenuTrigger.on('click', function(e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('active');
-  // });
+//   // $submenuTrigger.on('click', function(e) {
+//   //   e.preventDefault();
+//   //   $(this).toggleClass('active');
+//   // });
   
-});
+// });
 
 var myNav = document.getElementById('mynav');
 window.onscroll = function () { 
@@ -46,4 +46,15 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry)=> {
+    if(entry.isIntersecting){
+        entry.target.classList.add('show'); 
+    } else {
+      entry.target.classList.remove('show')
+    }
+  });
+});
 
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el)=> observer.observe(el));
