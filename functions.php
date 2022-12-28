@@ -9,7 +9,13 @@
     add_action('wp_enqueue_scripts', 'united_styles');
 
     function unitedcarremoval_features(){
+        register_nav_menu('primaryMenu', 'Primary Menu Location');
+        register_nav_menu('footerColumnFirst', 'Menu for footer column first Location');
+        register_nav_menu('footerColumnSecond', 'Menu for footer column second Location');
+        register_nav_menu('footerColumnThird', 'Menu or footer column third Location');
         add_theme_support('title-tag');
     }
 
     add_action('after_setup_theme', 'unitedcarremoval_features');
+
+   

@@ -159,7 +159,18 @@ nav .wrapper{
   
   .nav-links .mobile-item{
     display: none;
+  }  
+
+  .current-menu-item a {
+    font-weight: 500 !important;
+    color: #1b8f7a !important;
+    transition: 0.3 ease-in;
   }
+
+  .current-menu-item:hover a {
+    color: #fff !important;
+  }
+
   .nav-links .drop-menu{
     position: absolute;
     background: #f5f5f5;
@@ -216,7 +227,7 @@ nav .wrapper{
   }
   .content .row header{
     color: #17161a;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
   }
   .content .row .mega-links{
