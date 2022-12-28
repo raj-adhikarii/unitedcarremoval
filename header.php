@@ -126,7 +126,7 @@
                       </div>
                     </div>
                   </li>
-                  <li <?php if (is_page('blog')) echo 'class="current-menu-item"' ?>><a href="/archive.html">Blog</a></li>
+                  <li <?php if (is_page('blog')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('blog'); ?>">Blog</a></li>
                 </ul>
                 <!-- <?php wp_nav_menu(array(
                     'theme-location' => 'primaryMenu'
