@@ -5,7 +5,11 @@
             <img src="<?php echo get_theme_file_uri('/img/blog.png'); ?>" alt="blog-hero">
             <div class="container">     
                 <div class="centered">
-                    <h1>Best Car Wreckers Company In Australia</h1>
+                    <h1><?php if (is_category()){
+                        echo single_cat_title(); } 
+                        if (is_author()){
+                            echo the_author();
+                        }?> </h1>
                     <p>United Car Removal is a licensed and experienced service provider in the car wreckers business. Over the years, it became successful in presenting itself as one of the best car wreckers in Sydney, Australia. And their customer-oriented service is to be credited for it.</p>
                 </div>
             </div>

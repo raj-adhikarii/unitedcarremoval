@@ -1153,7 +1153,7 @@ button.learn-more:hover{
     display: inline-block;
   }
   
-  .pagination a {
+  .pagination a, .page-numbers.current {
     color: black;
     float: left;
     padding: 8px 16px;
@@ -1163,7 +1163,7 @@ button.learn-more:hover{
     margin: 0 4px;
   }
   
-  .pagination a.active {
+  .pagination a.active, .page-numbers.current {
     background-color: var(--acent-color);
     color: white;
     border: 1px solid var(--acent-color);
