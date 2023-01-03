@@ -8,10 +8,10 @@
                         </h4>
                         <ul class="footer-list">
                             <li class="footer-menu-link"><a href="<?php echo site_url(); ?>">Home</a></li>
-                            <li class="footer-menu-link"><a href="/about.html">About</a></li>
-                            <li class="footer-menu-link"><a href="/scrap-car-removal.html">Scrap Car Removal</a></li>
-                            <li class="footer-menu-link"><a href="/sell-car-for-cash.html">Sell Car For Cash</a></li>
-                            <li class="footer-menu-link"><a href="/contact.html">Contact Us</a></li>
+                            <li class="footer-menu-link"><a href="/about-us">About</a></li>
+                            <li class="footer-menu-link"><a href="/scrap-car-removal">Scrap Car Removal</a></li>
+                            <li class="footer-menu-link"><a href="/sell-car-for-cash">Sell Car For Cash</a></li>
+                            <li class="footer-menu-link"><a href="/contact-us">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -19,8 +19,8 @@
                             Explore
                         </h4>
                         <ul class="footer-list">
-                            <li class="footer-menu-link"><a href="/car-wreckers.html">Car Wreckers</a></li>
-                            <li class="footer-menu-link"><a href="/location.html">Location</a></li>
+                            <li class="footer-menu-link"><a href="/car-wreckers">Car Wreckers</a></li>
+                            <li class="footer-menu-link"><a href="/location">Location</a></li>
                             <li class="footer-menu-link"><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
                             <li class="footer-menu-link"><a href="<?php echo site_url('/terms-of-use'); ?>">Terms Of Use</a></li>
                             <li class="footer-menu-link"><a href="#">Sitemap</a></li>
@@ -31,10 +31,10 @@
                             Our Services
                         </h4>
                         <ul class="footer-list">
-                            <li class="footer-menu-link"><a href="/used-car-removal.html">Used Car Removal</a></li>
-                            <li class="footer-menu-link"><a href="/cash-for-unwanted-car.html">Cash For Unwanted  Cars</a></li>
-                            <li class="footer-menu-link"><a href="/cash-for-scrap-car.html">Cash For Scrap  Cars</a></li>
-                            <li class="footer-menu-link"><a href="/cash-for-abandoned-car.html">Cash For Abandoned  Cars</a></li>
+                            <li class="footer-menu-link"><a href="/used-car-removal">Used Car Removal</a></li>
+                            <li class="footer-menu-link"><a href="/cash-for-unwanted-car">Cash For Unwanted  Cars</a></li>
+                            <li class="footer-menu-link"><a href="/cash-for-scrap-car">Cash For Scrap  Cars</a></li>
+                            <li class="footer-menu-link"><a href="/cash-for-abandoned-car">Cash For Abandoned  Cars</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
