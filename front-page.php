@@ -4,12 +4,17 @@
             <div class="container">
                 <div class="hero-banner">
                     <div class="banner-content">
-                        <h1>Top Cash for Cars with United Car Removal</h1>
-                        
+                        <?php if(get_field('hero_section_title')): ?>
+                            <h1><?php the_field('hero_section_title'); ?></h1>
+                        <?php endif; ?>
+
                         <div class="iconlist">
-                            <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content">Cash for Cars Up To $9,999 with Free Car Removal Service</span></p>
-                            <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content">Instant Payment, Same Day Old Car Removal Sydney</span></p>
-                            <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content">Guaranteed Best Price, No Undercuts</span></p>
+                            <?php if( have_rows('home_page_icon_list') ): ?>
+                                <?php while( have_rows('home_page_icon_list') ): the_row(); ?>
+
+                                <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content"><?php the_sub_field('icon_list'); ?></span></p>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
 
                         <div class="banner cta">
@@ -20,7 +25,7 @@
 
                         <div class="we-buy">
                             <h3>We Buy Cars Of Any Brand No Matter The Condition</h3>
-                            <div class="brands">
+                            <div class="brands">                                
                                 <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/ford.svg'); ?>"></div>
                                 <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/holden.svg'); ?>"></div>
                                 <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/honda.svg'); ?>"></div>
