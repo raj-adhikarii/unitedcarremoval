@@ -40,126 +40,16 @@
                             </div>
                             <div class="card-body">
                                 <p><?php
-                                    echo wp_trim_words( get_the_content(), 40, '...' );
+                                    echo wp_trim_words( get_the_content(), 25, '...' );
                                 ?></p>
                             </div>
                             <div class="card-footer">
-                                <button class="learn-more"><a href="<?php the_permalink(); ?>">Learn More About Car For car Penrith</a></button>
+                                <button class="learn-more"><a href="<?php the_permalink(); ?>"><?php   echo wp_trim_words( get_the_title(), 5, '...' ); ?></a></button>
                             </div>
                         </div>
                     </div>
                 <?php }
                 ?>
-                    
-                    <!-- <div class="card">
-                        <div class="image-box">
-                            <a href="/single.html">
-                                <img src="<?php echo get_theme_file_uri('/img/card-blog.png'); ?>" alt="Blog-post-image">
-                                <div class="date">
-                                    <p>Posted on: October 14th, 2022</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cd">
-                            <div class="card-header">
-                                <h3><a href="/single.html">Cash for Cars Penrith – Reliable Used Car Buyers Penrith</a></h3>
-                            </div>
-                            <div class="card-body">
-                                <p>It is necessary to deal with knowledgeable unwanted car buyers in Penrith to sell your car and get the best Cash for Cars Penrith right away. This requires complete information on how the auto industry works, which markets to target, and how to differentiate and present the car.</p>
-                            </div>
-                            <div class="card-footer">
-                                <button class="learn-more"><a href="/single.html">Learn More About Car For car Penrith</a></button>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="card">
-                        <div class="image-box">
-                            <a href="/single.html">
-                                <img src="<?php echo get_theme_file_uri('/img/card-blog.png'); ?>" alt="Blog-post-image">
-                                <div class="date">
-                                    <p>Posted on: October 14th, 2022</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cd">
-                            <div class="card-header">
-                                <h3><a href="/single.html">Cash for Cars Penrith – Reliable Used Car Buyers Penrith</a></h3>
-                            </div>
-                            <div class="card-body">
-                                <p>It is necessary to deal with knowledgeable unwanted car buyers in Penrith to sell your car and get the best Cash for Cars Penrith right away. This requires complete information on how the auto industry works, which markets to target, and how to differentiate and present the car.</p>
-                            </div>
-                            <div class="card-footer">
-                                <button class="learn-more"><a href="/single.html">Learn More About Car For car Penrith</a></button>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="card">
-                        <div class="image-box">
-                            <a href="/single.html">
-                                <img src="<?php echo get_theme_file_uri('/img/card-blog.png'); ?>" alt="Blog-post-image">
-                                <div class="date">
-                                    <p>Posted on: October 14th, 2022</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cd">
-                            <div class="card-header">
-                                <h3><a href="/single.html">Cash for Cars Penrith – Reliable Used Car Buyers Penrith</a></h3>
-                            </div>
-                            <div class="card-body">
-                                <p>It is necessary to deal with knowledgeable unwanted car buyers in Penrith to sell your car and get the best Cash for Cars Penrith right away. This requires complete information on how the auto industry works, which markets to target, and how to differentiate and present the car.</p>
-                            </div>
-                            <div class="card-footer">
-                                <button class="learn-more"><a href="/single.html">Learn More About Car For car Penrith</a></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="image-box">
-                            <a href="/single.html">
-                                <img src="<?php echo get_theme_file_uri('/img/card-blog.png'); ?>" alt="Blog-post-image">
-                                <div class="date">
-                                    <p>Posted on: October 14th, 2022</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cd">
-                            <div class="card-header">
-                                <h3><a href="/single.html">Cash for Cars Penrith – Reliable Used Car Buyers Penrith</a></h3>
-                            </div>
-                            <div class="card-body">
-                                <p>It is necessary to deal with knowledgeable unwanted car buyers in Penrith to sell your car and get the best Cash for Cars Penrith right away. This requires complete information on how the auto industry works, which markets to target, and how to differentiate and present the car.</p>
-                            </div>
-                            <div class="card-footer">
-                                <button class="learn-more"><a href="/single.html">Learn More About Car For car Penrith</a></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="image-box">
-                            <a href="/single.html">
-                                <img src="<?php echo get_theme_file_uri('/img/card-blog.png'); ?>" alt="Blog-post-image">
-                                <div class="date">
-                                    <p>Posted on: October 14th, 2022</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cd">
-                            <div class="card-header">
-                                <h3><a href="/single.html">Cash for Cars Penrith – Reliable Used Car Buyers Penrith</a></h3>
-                            </div>
-                            <div class="card-body">
-                                <p>It is necessary to deal with knowledgeable unwanted car buyers in Penrith to sell your car and get the best Cash for Cars Penrith right away. This requires complete information on how the auto industry works, which markets to target, and how to differentiate and present the car.</p>
-                            </div>
-                            <div class="card-footer">
-                                <button class="learn-more"><a href="/single.html">Learn More About Car For car Penrith</a></button>
-                            </div>
-                        </div>
-                    </div> -->
                     
                 </div>
 

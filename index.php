@@ -36,7 +36,7 @@
                             </div>
                             <div class="card-body">
                                 <p><?php
-                                    echo wp_trim_words( get_the_content(), 40, '...' );
+                                    echo wp_trim_words( get_the_content(), 25, '...' );
                                 ?></p>
                             </div>
                             <div class="card-footer">
