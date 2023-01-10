@@ -1,7 +1,9 @@
 <?php get_header(); ?>
-<?php /*Template Name: Scrap car removal Template */?>
+
+<?php /*Template Name: Generic wreckers Template */ ?>
 
 <main>
+
         <section class="about-hero hidden">
             <div class="container">
                 <div class="hero-about">
@@ -46,7 +48,8 @@
                 </div>
             </div>
         </section>
-    <!-- About section -->
+
+         <!-- About Section -->
         <section class="about hidden">
             <div class="container">
                 <div class="about-banner">
@@ -65,7 +68,7 @@
             </div>
         </section>
 
-        <!-- Main Contect -->
+        <!-- Main contant -->
         <?php 
             $main_content=get_field('main_content');
                 if($main_content){
@@ -92,7 +95,37 @@
         </section>
         <?php } } ;?>
 
-        <!-- Pre footer -->
+        <!-- FAQs -->
+        <section class="faqs hidden">
+            <div class="container">
+                <div class="faq">
+                    <div class="first-half">
+                        <h2>Frequently Asked Questions (FAQs)</h2>
+                    </div>
+                    <div class="second-half">
+                        <div class="col">
+                            <div class="tabs">
+                                <?php $faqs = get_field('faqs'); 
+                                $var = [];
+                                if($faqs){
+                                    foreach($faqs as $key => $faq){
+                                ?>                           
+                                <div class="tab">
+                                    <input type="checkbox" id="<?php echo $faq['faqs_num']; ?>">
+                                    <label class="tab-label" for="<?php echo $faq['faqs_num']; ?>"><?php echo $faq['faqs_qns']; ?></label>
+                                    <div class="tab-content">
+                                    <p><?php echo $faq['faqs_ans']; ?></p>
+                                    </div>
+                                </div>
+                                <?php } } ;?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Pre footer -->
         <section class="pre-footer hidden">
             <div class="container">
                 <div class="pre-footer-wraper">

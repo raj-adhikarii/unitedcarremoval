@@ -93,6 +93,7 @@
             </div>
         </section>
         <?php } } ;?>
+        
         <!-- FAQs -->
         <section class="faqs hidden">
             <div class="container">

@@ -93,18 +93,20 @@
 
 <!-- Pre footer -->
 <section class="pre-footer hidden">
-    <div class="container">
-        <div class="pre-footer-wraper">
-            <div class="pre-footer-message">
-                <p>Call us now at <strong>0487002222</strong> or turn on your laptop and send us an email at <strong>info@unitedcarremoval.com.au</strong>. After that getting your cars removed and earning cash is just a matter of minutes.</p>
-            </div>
-            <div class="pre-footer-cta">
-                <div class="ask-for-price">
-                    <button class="white-cta"><a href="#">Ask for price</a></button>
+            <div class="container">
+                <div class="pre-footer-wraper">
+                    <?php if(get_field('pre_footer')): ?>
+                    <div class="pre-footer-message">
+                        <p><?php the_field('pre_footer') ; ?></p>
+                    </div>
+                    <?php endif; ?>
+                    <div class="pre-footer-cta">
+                        <div class="ask-for-price">
+                            <button class="white-cta"><a href="#">Ask for price</a></button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 </section>
 </main>
 

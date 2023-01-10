@@ -1,33 +1,44 @@
 <?php get_header(); ?>
 
-<?php /*Template Name: Cash for cars campbelltown Template*/ ?>
+<?php /*Template Name: Generic Location Template*/ ?>
 
 <main>
         <section class="about-hero hidden">
             <div class="container">
                 <div class="hero-about">
                     <div class="banner-content">
-                        <h1>Cash For Cars Campbelltown - Free Car Removal Services</h1>                        
-                        <div class="iconlist">
-                            <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content">Top Cash for car service that operates around the clock</span></p>
-                            <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content">Reliable car removal and wrecker service</span></p>
-                            <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content">Sell Your Scrap Car For Cash in Campbelltown</span></p>
-                        </div>
+                    <?php 
+                        if(get_field('hero_section_title')): ?>
+                        <h1><?php the_field('hero_section_title'); ?></h1>
+                        <?php endif; ?>
 
-                        <div class="banner cta">
-                            <button class="primary-cta"><a href="#">Ask for price</a></button>
-                        </div>    
-
-                        <div class="we-buy">
-                            <h3>We Buy Cars Of Any Brand No Matter The Condition</h3>
-                            <div class="brands">
-                                <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/ford.svg'); ?>"></div>
-                                <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/holden.svg'); ?>"></div>
-                                <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/honda.svg'); ?>"></div>
-                                <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/toyata.svg'); ?>"></div>
-                                <div class="brands-img"><img src="<?php echo get_theme_file_uri('/img/hundai.svg'); ?>"></div>
+                            <div class="iconlist">
+                            <?php if( have_rows('home_page_icon_list') ): ?>
+                                <?php while( have_rows('home_page_icon_list') ): the_row(); ?>
+                                    <p><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/icon-list.svg'); ?>"></span><span class="icon-list-content"><?php the_sub_field('icon_list'); ?></span></p>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                             </div>
-                        </div>
+
+                            <div class="banner cta">
+                                <button class="primary-cta"><a href="#">Ask for price</a></button>
+                            </div>    
+
+                            <div class="we-buy">
+                                <?php if(get_field('we_buys')): ?>
+                                    <h3><?php the_field('we_buys'); ?></h3>
+                                <?php endif; ?>
+                                <div class="brands">
+                                    <?php 
+                                        $car_brands_logos=get_field('car_brands_logos');
+                                        
+                                        if($car_brands_logos){
+                                            foreach($car_brands_logos as $car_brand_logo){
+                                    ?>
+                                        <div class="brands-img"><img src="<?php echo $car_brand_logo['car_brand_logo']['url'];?>" alt="<?php echo $car_brand_logo['car_brand_logo']['alt'];?>"></div>
+                                    <?php } }; ?>
+                                </div>
+                            </div>
 
                     </div>
                     <div class="banner-image">
@@ -42,37 +53,46 @@
             <div class="container">
                 <div class="about-banner">
                     <div class="first-half about">
-                        <h2>Cash for Cars Campbelltown</h2>
-                        <p class="mb-2">Unwanted Car Removal near me has never been easier. Sydney’s famous United Car Removal is now offering its most sought Cash for Cars Campbeltown, just near your home or office. Campbelltown Unwanted Car Removal provides cash for unwanted, junk, old, and used car removal services in Campbelltown. The company had been serving as the leading car wrecker in Campbelltown for over a decade.</p>
 
-                        <p class="mb-2">However, such services were lacking in Campbelltown for a long time. So to fill that void and to provide the best of our services to the Campbelltown dwellers, we established a new branch over there. And since its establishment, our car wreckers Campbelltown service has remained inexorable all along.</p>
+                    <?php 
+                        if(get_field('about_title')): ?>
+                            <h2><?php the_field('about_title'); ?></h2>
+                    <?php endif; ?>
 
+                    <?php if(get_field('about_desc')): ?>
+                        <p><?php echo the_field('about_desc'); ?></p>
+                    <?php endif; ?>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="service-removal hidden">
-            <div class="container">
-                <div class="about-banner">
-                    <div class="first-half">
-                        <h2>Free Car Removal in Campbelltown and Cash For Cars Campbelltown</h2>
-                        <p class="mb-2">Campbelltown Unwanted Car Removal is the only cash for cars Campbelltown service that operates around the clock, ready for departure upon your request. Rusted, old, or damaged – we accept all kinds of cars at United Car Removal. Whatever the make, model, or condition of your car, if you want reliable car removal and wrecker service, United Car Removal is the place to call.</p>
-
-                        <p class="mb-2">Give us a call today on <a href="#">0487002222</a> or drop an email at <a href="#">info@unitedcarremoval.com.au</a>, our highly professional car buyers and trained staff include a vast network of consultants who are located everywhere in Australia helping us get some of the best used car deals for our clients in Sydney. We guarantee <a href="#">top dollar cash for cars</a> Campbelltown, which is made possible through a two-stage valuation process.</p>
-
-                        <p class="mb-2">This process is cleverly designed to take into account details, such as junk car model, age, mileage, and condition, and is verified on-site. No matter the condition of your car, you can expect a healthy lump of cash in your wallet when you call United Car Removal.</p>
+        <!-- Main contant -->
+        <?php 
+            $main_content=get_field('main_content');
+                if($main_content){
+                    foreach($main_content as $main){
+        ?>
+        <section class="service-removal  <?php echo $main['row_type'];?> hidden">
+            <div class="container">                   
+                <div class="col_wrapper about-banner">
+                    <div class=" col-1 first-half">
+                        <h2><?php echo $main['section_title'];?></h2>
+                        <p><?php echo $main['section_description'];?></p>
 
                         <div class="ask-for-price">
                             <button class="primary-cta"><a href="#">Ask for price</a></button>
                         </div>
                     </div>
-                    <div class="second-half">
-                        <img src="<?php echo get_theme_file_uri('/img/removal service.png'); ?>" alt="removal service">
+                    
+                    <div class=" col-2 second-half">
+                        <img src="<?php echo $main['section_image']['url'];?>" alt="<?php echo $main['section_image']['alt'];?>">
                     </div>
                 </div>
+               
             </div>
         </section>
+        <?php } } ;?>
 
         <section class="sydney-removal hidden">
             <div class="container">
@@ -187,43 +207,45 @@
             </div>
         </section>
 
-         <!-- FAQs -->
-         <section class="faqs hidden">
+        <!-- FAQs -->
+        <section class="faqs hidden">
             <div class="container">
-            <div class="faq">
-                        <div class="first-half">
-                            <h2>Frequently Asked Questions (FAQs)</h2>
-                        </div>
-                        <div class="second-half">
-                            <div class="col">
-                                <div class="tabs">
+                <div class="faq">
+                    <div class="first-half">
+                        <h2>Frequently Asked Questions (FAQs)</h2>
+                    </div>
+                    <div class="second-half">
+                        <div class="col">
+                            <div class="tabs">
+                                <?php $faqs = get_field('faqs'); 
+                                $var = [];
+                                if($faqs){
+                                    foreach($faqs as $key => $faq){
+                                ?>                           
                                 <div class="tab">
-                                    <input type="checkbox" id="chck1">
-                                    <label class="tab-label" for="chck1">Item 1</label>
+                                    <input type="checkbox" id="<?php echo $faq['faqs_num']; ?>">
+                                    <label class="tab-label" for="<?php echo $faq['faqs_num']; ?>"><?php echo $faq['faqs_qns']; ?></label>
                                     <div class="tab-content">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+                                    <p><?php echo $faq['faqs_ans']; ?></p>
                                     </div>
                                 </div>
-                                <div class="tab">
-                                    <input type="checkbox" id="chck2">
-                                    <label class="tab-label" for="chck2">Item 2</label>
-                                    <div class="tab-content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
-                                    </div>
-                                </div>
-                                </div>
+                                <?php } } ;?>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <!-- Pre footer -->
         <section class="pre-footer hidden">
             <div class="container">
                 <div class="pre-footer-wraper">
+                    <?php if(get_field('pre_footer')): ?>
                     <div class="pre-footer-message">
-                        <p>Call us now at <strong>0487002222</strong> or turn on your laptop and send us an email at <strong>info@unitedcarremoval.com.au</strong>. After that getting your cars removed and earning cash is just a matter of minutes.</p>
+                        <p><?php the_field('pre_footer') ; ?></p>
                     </div>
+                    <?php endif; ?>
                     <div class="pre-footer-cta">
                         <div class="ask-for-price">
                             <button class="white-cta"><a href="#">Ask for price</a></button>

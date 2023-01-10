@@ -34,10 +34,10 @@
                 <input type="radio" name="slider" id="close-btn">
                 <ul class="nav-links">
                   <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                  <li <?php if ('is_front_page') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>">Home</a></li>
+                  <li <?php if ('is_front_page') echo 'class="current-menu-item"'?: 'class="menu-item"' ?>><a href="<?php echo site_url(); ?>">Home</a></li>
                   <li <?php if (is_page('about-us')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/about-us">About</a></li>
                   <li <?php if (is_page('sell-car-for-cash')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/sell-car-for-cash">Sell Car for Cash</a></li>
-                  <li <?php if (is_page('scrap-car-removal')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/scrap-car-removal">Scrap Car Removal</a></li>
+                  <li <?php if (is_page('free-scrap-car-removal')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/free-scrap-car-removal">Scrap Car Removal</a></li>
         
                   <li>
                     <a href="#" class="desktop-item">Car Services</a>
@@ -82,7 +82,7 @@
                     <input type="checkbox" id="showDrop">
                     <label for="showDrop" class="mobile-item">Car Wreckers</label>
                     <ul class="drop-menu">
-                      <li <?php if (is_page('car-wreckers')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/car-wreckers">Car Wreckers</a></li>
+                      <li <?php if (is_page('car-wreckers-sydney')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/car-wreckers-sydney">Car Wreckers</a></li>
                       <li <?php if (is_page('jeep-wreckers')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/jeep-wreckers">Jeep Wreckers</a></li>
                       <li <?php if (is_page('van-wreckers')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/van-wreckers">Van Wreckers</a></li>
                       <li <?php if (is_page('truck-wreckers')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/truck-wreckers">Truck Wreckers</a></li>
