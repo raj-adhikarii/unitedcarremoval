@@ -29,7 +29,9 @@
         <div class="container">
             <nav>
               <div class="wrapper">
-                <div class="logo"> <span class="logo"><a href="<?php echo site_url(); ?>"><img src="<?php echo get_theme_file_uri('/img/logo.svg'); ?>" alt="United Car"></a></span></div>
+                <?php if ( function_exists( 'the_custom_logo' ) ) {
+                  the_custom_logo();
+                } ?>
                 <input type="radio" name="slider" id="menu-btn">
                 <input type="radio" name="slider" id="close-btn">
                 <ul class="nav-links">
