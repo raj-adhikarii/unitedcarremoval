@@ -18,7 +18,7 @@
 
     add_action('after_setup_theme', 'unitedcarremoval_features');
 
-    //logo
+//Logo Supprt
     function unitedcar_logo_setup() {
         $defaults = array(
             'height'               => 100,
@@ -32,7 +32,7 @@
     }
     add_action( 'after_setup_theme', 'unitedcar_logo_setup' );
 
-    //estimated reading time
+//estimated reading time
 function reading_time() {
     $content = get_post_field( 'post_content', $post->ID );
     $word_count = str_word_count( strip_tags( $content ) );
@@ -48,4 +48,18 @@ function reading_time() {
     return $totalreadingtime;
     }
 
-   
+//Register Map Widget
+function wpb_widgets_init() {
+ 
+    register_sidebar( array(
+        'name' => __( 'Map', 'wpb' ),
+        'id' => 'map_widget',
+        'description' => __( 'The main map widget appears on the page choch contain map field', 'wpb' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    }
+ 
+add_action( 'widgets_init', 'wpb_widgets_init' );

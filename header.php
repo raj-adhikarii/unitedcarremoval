@@ -31,7 +31,7 @@
               <div class="wrapper">
                 <?php if ( function_exists( 'the_custom_logo' ) ) {
                   the_custom_logo();
-                } ?>
+				} ?>
                 <input type="radio" name="slider" id="menu-btn">
                 <input type="radio" name="slider" id="close-btn">
                 <ul class="nav-links">
@@ -94,8 +94,8 @@
         
                   <li>
                     <a href="#" class="desktop-item">Locations</a>
-                    <input type="checkbox" id="showMega">
-                    <label for="showMega" class="mobile-item">Locations</label>
+                    <input type="checkbox" id="showMega2">
+                    <label for="showMega2" class="mobile-item">Locations</label>
                     <div class="mega-box">
                       <div class="content">
                         <div class="row">
