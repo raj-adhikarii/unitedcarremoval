@@ -73,6 +73,7 @@
 
   .row-reverse .col_wrapper {
     flex-direction: row-reverse;
+    gap: 30px;
 }
   /* Container */
   .container{
@@ -680,7 +681,7 @@ input {
   max-height: 0;
   padding: 0 1em;
   color: #2c3e50;
-  background: #b6e7df;
+  background: #f3ffff;
   transition: all 0.35s;
 }
 .tab-close {

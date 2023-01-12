@@ -100,7 +100,7 @@
                           <img src="<?php echo get_theme_file_uri('/img/car-nav.jpg'); ?>" alt="">
                         </div>
                         <div class="row">
-                          <header>Design Services</header>
+                          <header>Cash for car</header>
                           <ul class="mega-links">
                             <li <?php if (is_page('cash-for-car-sydney')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/cash-for-car-sydney">Cash For Car Sydney</a></li>
                             <li <?php if (is_page('car-wreckers-penrith')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/car-wreckers-penrith">Car Wreckers Penrith</a></li>
@@ -108,7 +108,7 @@
                           </ul>
                         </div>
                         <div class="row">
-                          <header>Email Services</header>
+                          <header>Car Removal</header>
                           <ul class="mega-links">
                             <li <?php if (is_page('car-removal-blacktown')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/car-removal-blacktown">Car Removal Blacktown</a></li>
                             <li <?php if (is_page('cash-for-cars-manly')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/cash-for-cars-manly">Cash For Cars Manly</a></li>
@@ -116,7 +116,7 @@
                           </ul>
                         </div>
                         <div class="row">
-                          <header>Security services</header>
+                          <header>Car Towing</header>
                           <ul class="mega-links">
                             <li <?php if (is_page('cash-for-cars-campbelltown')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/cash-for-cars-campbelltown">Cash For Car Campbelltown</a></li>
                             <li <?php if (is_page('all-car-towing-strathfield')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>/all-car-towing-strathfield">All Car Towing Strathfield</a></li>

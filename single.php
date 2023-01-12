@@ -21,7 +21,7 @@ while(have_posts()) {
                 <div class="main-content">
                     <div class="iconlist display-flex">
                         <h5><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/address.svg'); ?>"></span><span class="icon-list-content"><?php the_author_posts_link(); ?></span></h5>
-                        <h5><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/time.svg'); ?>"></span><span class="icon-list-content"><?php echo reading_time(); ?> To Read</span></h5>
+                        <!-- <h5><span class="icon-list"><img src="<?php echo get_theme_file_uri('/img/time.svg'); ?>"></span><span class="icon-list-content"><?php echo reading_time(); ?> To Read</span></h5> -->
                     </div>
                     <p class="mb-2"><?php the_content(); ?></p>
 

@@ -61,8 +61,7 @@
                         <?php endif; ?>
                     </div>
                     <div class="second-half">
-                    <?php echo do_shortcode('[activecampaign form=21 css=1]');?>
-                    
+                    <!-- <?php echo do_shortcode('[activecampaign form=21 css=0]');?>                     -->
                     </div>
                 </div>
             </div>
